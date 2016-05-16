@@ -1,16 +1,4 @@
-module.exports = {
-  plugins: [
-    require('babel-plugin-syntax-class-properties'),
-    require('babel-plugin-syntax-decorators'),
-    require('babel-plugin-syntax-object-rest-spread'),
+var component = require('./component');
+require('./main.css');
 
-    // You can pass parameters using an array syntax
-    [
-      require('babel-plugin-transform-regenerator'),
-      {
-        async: false,
-        asyncGenerators: false
-      }
-    ]
-  ]
-};
+document.body.appendChild(component());
